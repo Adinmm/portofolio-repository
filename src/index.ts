@@ -30,12 +30,8 @@ const PORT = 3000;
 // Middleware JSON
 app.use(express.json());
 
-// Route
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello TypeScript Express!");
-});
 
-app.post("/send_message", async (req: Request, res: Response) => {
+app.post("/api/send_message", async (req: Request, res: Response) => {
   const { name, email, message } = req.body;
 
   try {
