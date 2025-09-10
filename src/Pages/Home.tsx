@@ -79,7 +79,7 @@ export default function Home() {
     setIsMenuOpen(false);
   };
 
-  const {state, stateHandle} = useGlobalContext()
+  const { state, stateHandle } = useGlobalContext();
 
   const skills = [
     { name: "React.js", icon: FaReact, level: 95 },
@@ -94,9 +94,8 @@ export default function Home() {
 
   const projects = [
     {
-      title: "Project 1",
-      description: `Development of a Web Based Information 
-System for Chemical Laboratory Service Orders 
+      title: "Chemical Lab Service Order ",
+      description: `Developed a Chemical Lab Service Order system focusing on the frontend with React.js (routing, form validation, state management, API integration, and responsive UI design), while also contributing to the backend using Node.js, Express, and PostgreSQL for building RESTful APIs, implementing JWT authentication, and managing database operations to ensure secure and efficient system performance. 
  `,
       tech: ["React", "Node.js", "Postgres", "Express"],
       style: "bg-gradient-to-br from-blue-500 to-purple-600",
@@ -106,9 +105,9 @@ System for Chemical Laboratory Service Orders
         "https://github.com/greenlabsindonesia/greenlabs-form-frontend",
     },
     {
-      title: "Project 2",
+      title: "Tourism Promotion System",
       description:
-        "Development of a Web Based Tourism Promotion System for Desa Pemepek",
+        "Developed a Tourism Promotion System as a personal project at the request of the village head and local tourism managers. The system was built using React.js with TypeScript and Tailwind CSS for modern and responsive styling. This project was designed to facilitate the digital promotion of village tourism destinations, making information more accessible to the public and tourists.",
       tech: ["React", "Tailwind", "Postgres", "Laravel"],
       style: "bg-gradient-to-br from-blue-500 to-purple-600",
       image: Project2,
@@ -116,9 +115,9 @@ System for Chemical Laboratory Service Orders
       githubUrl: "https://github.com/kknPemepek/wisata-pemepek",
     },
     {
-      title: "Project 3",
+      title: "Agricultural Data and Reporting ",
       description:
-        "Development of a Web Based System for Agricultural Data and Reporting in Sumbawa",
+        "On the Agricultural Data and Reporting project, I served as a Frontend Developer, building the entire frontend structure of the application. I worked on models using Zod for data validation, created custom hooks with React Hook Form, managed global state with the Context API, and developed supporting utilities to make the development process more efficient and structured.",
       tech: ["React", "Tailwind", "Vite", "TypeScript"],
       style: "bg-gradient-to-br from-blue-500 to-purple-600",
       image: Project3,
@@ -150,8 +149,6 @@ System for Chemical Laboratory Service Orders
       description: "Optimasi performa aplikasi untuk pengalaman user terbaik",
     },
   ];
-
-
 
   return (
     <div className={isDarkMode ? "dark" : ""}>
@@ -265,10 +262,14 @@ System for Chemical Laboratory Service Orders
                   <span>View My Work</span>
                   <IoRocketSharp />
                 </button>
-                <button className="border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 px-8 py-3 rounded-full hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2">
+                <a
+                  href="/Muhammad_Muayyadin_CV_Academy2026.pdf"
+                  download="Muhammad_Muayyadin_CV_Academy2026.pdf"
+                  className="border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 px-8 py-3 rounded-full hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
+                >
                   <FaDownload />
                   <span>Download CV</span>
-                </button>
+                </a>
               </div>
 
               <div className="flex justify-center space-x-6">
@@ -611,14 +612,14 @@ System for Chemical Laboratory Service Orders
                 {/* Backdrop */}
                 <div
                   className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-                  onClick={() => stateHandle('toggle', false)}
+                  onClick={() => stateHandle("toggle", false)}
                 ></div>
 
                 {/* Popup Content */}
                 <div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 transform ">
                   {/* Close Button */}
                   <button
-                     onClick={() => stateHandle('toggle', false)}
+                    onClick={() => stateHandle("toggle", false)}
                     className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
                   >
                     <FaTimes className="w-5 h-5" />
@@ -641,14 +642,14 @@ System for Chemical Laboratory Service Orders
                   {/* Action Buttons */}
                   <div className="flex space-x-3">
                     <button
-                      onClick={() => stateHandle('toggle', false)}
+                      onClick={() => stateHandle("toggle", false)}
                       className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:scale-105 transition-transform duration-300"
                     >
                       Great!
                     </button>
                     <button
                       onClick={() => {
-                        stateHandle('toggle', false)
+                        stateHandle("toggle", false);
                         scrollToSection("projects");
                       }}
                       className="flex-1 border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-all duration-300"
