@@ -15,6 +15,7 @@
   "dependencies": {
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.1",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "mustache": "^4.2.0",
     "nodemailer": "^7.0.6",
@@ -22,6 +23,7 @@
     "typescript": "^5.9.2"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/mustache": "^4.2.6",
     "@types/nodemailer": "^7.0.1"
   }

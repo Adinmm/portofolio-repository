@@ -3,7 +3,7 @@ import path from "path";
 import fs from "fs";
 import Mustache from "mustache";
 import { transporter } from "../src/configs/nodemailer";
-
+import cors from "cors";
 async function sendMessageFromPortofolio(
   name: string,
   email: string,
@@ -26,6 +26,10 @@ await transporter.sendMail({
 
 const app = express();
 const PORT = 3000;
+
+app.use(cors({
+  origin: "http://localhost:5173", // atau "*" untuk semua origin
+}));
 
 // Middleware JSON
 app.use(express.json());
