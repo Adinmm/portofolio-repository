@@ -10,7 +10,7 @@ import {
   FaExternalLinkAlt,
   FaCode,
   FaLaptopCode,
-  FaMobile,
+  // FaMobile,
   FaDatabase,
   FaReact,
   FaNodeJs,
@@ -133,11 +133,11 @@ export default function Home() {
       description:
         "Pengembangan website modern dan responsif dengan teknologi terkini",
     },
-    {
-      icon: FaMobile,
-      title: "Mobile App Development",
-      description: "Aplikasi mobile cross-platform dengan React Native",
-    },
+    // {
+    //   icon: FaMobile,
+    //   title: "Mobile App Development",
+    //   description: "Aplikasi mobile cross-platform dengan React Native",
+    // },
     {
       icon: FaDatabase,
       title: "Backend Development",
@@ -339,7 +339,7 @@ export default function Home() {
                   provide value to society.
                 </p>
 
-                <div className="grid grid-cols-2 gap-6 mt-8">
+                <div className="grid grid-cols-1 gap-6 mt-8">
                   <div className="flex items-center space-x-3">
                     <FaMapMarkerAlt className="text-blue-500" />
                     <span>Lombok Barat, Indonesia</span>
@@ -372,7 +372,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <div
                   key={index}
@@ -445,7 +445,7 @@ export default function Home() {
                   <div
                     className={`h-48 ${project.style} relative overflow-hidden`}
                   >
-                    <img className="object-cover" src={project.image} alt="" />
+                    <img className="object-cover w-full h-full" src={project.image} alt="" />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                       <div className="flex space-x-4">
                         <a
