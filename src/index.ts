@@ -28,7 +28,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(cors({
-  origin: "http://localhost:5173", // atau "*" untuk semua origin
+  origin: "https://adinmmdev.netlify.app"
 }));
 
 // Middleware JSON
